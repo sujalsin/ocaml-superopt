@@ -1,0 +1,876 @@
+# dune runtest
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /Users/sujal/.cache/dune/db
+# Workspace root: /Users/sujal/CascadeProjects/ocaml-superopt
+# Auto-detected concurrency: 8
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /usr/local/bin/ocamlc.opt -config > /var/folders/46/853jx4m96z3f22x9djqcyqp80000gn/T/dune_b4b103_output
+$ (cd _build/default/src/test && ./test_superopt.exe)
+> .......
+> Testing complex valid sequence:
+> Instruction: CONST0, Operands: []
+> Instruction: CONST1, Operands: []
+> Instruction: ADDINT, Operands: []
+> Instruction: CONST2, Operands: []
+> Instruction: CONST1, Operands: []
+> Instruction: ADDINT, Operands: []
+> Instruction: ADDINT, Operands: []
+> Instruction: POP, Operands: []
+> Processing CONST0 with depth 0
+>   Push constant, new depth: 1
+>   After instruction, depth: 1
+> Processing CONST1 with depth 1
+>   Push constant, new depth: 2
+>   After instruction, depth: 2
+> Processing ADDINT with depth 2
+>   Add, new depth: 1
+>   After instruction, depth: 1
+> Processing CONST2 with depth 1
+>   Push constant, new depth: 2
+>   After instruction, depth: 2
+> Processing CONST1 with depth 2
+>   Push constant, new depth: 3
+>   After instruction, depth: 3
+> Processing ADDINT with depth 3
+>   Add, new depth: 2
+>   After instruction, depth: 2
+> Processing ADDINT with depth 2
+>   Add, new depth: 1
+>   After instruction, depth: 1
+> Processing POP with depth 1
+>   Pop, new depth: 0
+>   After instruction, depth: 0
+> End of sequence, final depth: 0
+> Final validation result: true
+>
+> Testing empty sequence:
+> End of sequence, final depth: 0
+> Final validation result: true
+>
+> Testing multiple pop sequence:
+> Instruction: CONST0, Operands: []
+> Instruction: POP, Operands: []
+> Instruction: POP, Operands: []
+> Processing CONST0 with depth 0
+>   Push constant, new depth: 1
+>   After instruction, depth: 1
+> Processing POP with depth 1
+>   Pop, new depth: 0
+>   After instruction, depth: 0
+> Processing POP with depth 0
+>   Pop with empty stack!
+>   After instruction, depth: -1
+>   Stack underflow detected!
+> Final validation result: false
+>
+> Testing non-empty final stack sequence:
+> Instruction: CONST0, Operands: []
+> Instruction: CONST1, Operands: []
+> Instruction: ADDINT, Operands: []
+> Processing CONST0 with depth 0
+>   Push constant, new depth: 1
+>   After instruction, depth: 1
+> Processing CONST1 with depth 1
+>   Push constant, new depth: 2
+>   After instruction, depth: 2
+> Processing ADDINT with depth 2
+>   Add, new depth: 1
+>   After instruction, depth: 1
+> End of sequence, final depth: 1
+> Final validation result: false
+>
+> Testing basic valid sequence:
+> Instruction: CONST0, Operands: []
+> Instruction: CONST1, Operands: []
+> Instruction: ADDINT, Operands: []
+> Instruction: POP, Operands: []
+>
+> Testing basic invalid sequence:
+> Instruction: POP, Operands: []
+> Instruction: CONST0, Operands: []
+> Processing CONST0 with depth 0
+>   Push constant, new depth: 1
+>   After instruction, depth: 1
+> Processing CONST1 with depth 1
+>   Push constant, new depth: 2
+>   After instruction, depth: 2
+> Processing ADDINT with depth 2
+>   Add, new depth: 1
+>   After instruction, depth: 1
+> Processing POP with depth 1
+>   Pop, new depth: 0
+>   After instruction, depth: 0
+> End of sequence, final depth: 0
+> Final validation result: true
+> Processing POP with depth 0
+>   Pop with empty stack!
+>   After instruction, depth: -1
+>   Stack underflow detected!
+> Final validation result: false
+>
+> Valid sequence result: true
+> Invalid sequence result: false
+>
+>
+> Testing deep stack sequence:
+> Processing CONST0 with depth 0
+>   Push constant, new depth: 1
+>   After instruction, depth: 1
+> Processing CONST0 with depth 1
+>   Push constant, new depth: 2
+>   After instruction, depth: 2
+> Processing CONST0 with depth 2
+>   Push constant, new depth: 3
+>   After instruction, depth: 3
+> Processing CONST0 with depth 3
+>   Push constant, new depth: 4
+>   After instruction, depth: 4
+> Processing CONST0 with depth 4
+>   Push constant, new depth: 5
+>   After instruction, depth: 5
+> Processing CONST0 with depth 5
+>   Push constant, new depth: 6
+>   After instruction, depth: 6
+> Processing CONST0 with depth 6
+>   Push constant, new depth: 7
+>   After instruction, depth: 7
+> Processing CONST0 with depth 7
+>   Push constant, new depth: 8
+>   After instruction, depth: 8
+> Processing CONST0 with depth 8
+>   Push constant, new depth: 9
+>   After instruction, depth: 9
+> Processing CONST0 with depth 9
+>   Push constant, new depth: 10
+>   After instruction, depth: 10
+> Processing CONST0 with depth 10
+>   Push constant, new depth: 11
+>   After instruction, depth: 11
+> Processing CONST0 with depth 11
+>   Push constant, new depth: 12
+>   After instruction, depth: 12
+> Processing CONST0 with depth 12
+>   Push constant, new depth: 13
+>   After instruction, depth: 13
+> Processing CONST0 with depth 13
+>   Push constant, new depth: 14
+>   After instruction, depth: 14
+> Processing CONST0 with depth 14
+>   Push constant, new depth: 15
+>   After instruction, depth: 15
+> Processing CONST0 with depth 15
+>   Push constant, new depth: 16
+>   After instruction, depth: 16
+> Processing CONST0 with depth 16
+>   Push constant, new depth: 17
+>   After instruction, depth: 17
+> Processing CONST0 with depth 17
+>   Push constant, new depth: 18
+>   After instruction, depth: 18
+> Processing CONST0 with depth 18
+>   Push constant, new depth: 19
+>   After instruction, depth: 19
+> Processing CONST0 with depth 19
+>   Push constant, new depth: 20
+>   After instruction, depth: 20
+> Processing CONST0 with depth 20
+>   Push constant, new depth: 21
+>   After instruction, depth: 21
+> Processing CONST0 with depth 21
+>   Push constant, new depth: 22
+>   After instruction, depth: 22
+> Processing CONST0 with depth 22
+>   Push constant, new depth: 23
+>   After instruction, depth: 23
+> Processing CONST0 with depth 23
+>   Push constant, new depth: 24
+>   After instruction, depth: 24
+> Processing CONST0 with depth 24
+>   Push constant, new depth: 25
+>   After instruction, depth: 25
+> Processing CONST0 with depth 25
+>   Push constant, new depth: 26
+>   After instruction, depth: 26
+> Processing CONST0 with depth 26
+>   Push constant, new depth: 27
+>   After instruction, depth: 27
+> Processing CONST0 with depth 27
+>   Push constant, new depth: 28
+>   After instruction, depth: 28
+> Processing CONST0 with depth 28
+>   Push constant, new depth: 29
+>   After instruction, depth: 29
+> Processing CONST0 with depth 29
+>   Push constant, new depth: 30
+>   After instruction, depth: 30
+> Processing CONST0 with depth 30
+>   Push constant, new depth: 31
+>   After instruction, depth: 31
+> Processing CONST0 with depth 31
+>   Push constant, new depth: 32
+>   After instruction, depth: 32
+> Processing CONST0 with depth 32
+>   Push constant, new depth: 33
+>   After instruction, depth: 33
+> Processing CONST0 with depth 33
+>   Push constant, new depth: 34
+>   After instruction, depth: 34
+> Processing CONST0 with depth 34
+>   Push constant, new depth: 35
+>   After instruction, depth: 35
+> Processing CONST0 with depth 35
+>   Push constant, new depth: 36
+>   After instruction, depth: 36
+> Processing CONST0 with depth 36
+>   Push constant, new depth: 37
+>   After instruction, depth: 37
+> Processing CONST0 with depth 37
+>   Push constant, new depth: 38
+>   After instruction, depth: 38
+> Processing CONST0 with depth 38
+>   Push constant, new depth: 39
+>   After instruction, depth: 39
+> Processing CONST0 with depth 39
+>   Push constant, new depth: 40
+>   After instruction, depth: 40
+> Processing CONST0 with depth 40
+>   Push constant, new depth: 41
+>   After instruction, depth: 41
+> Processing CONST0 with depth 41
+>   Push constant, new depth: 42
+>   After instruction, depth: 42
+> Processing CONST0 with depth 42
+>   Push constant, new depth: 43
+>   After instruction, depth: 43
+> Processing CONST0 with depth 43
+>   Push constant, new depth: 44
+>   After instruction, depth: 44
+> Processing CONST0 with depth 44
+>   Push constant, new depth: 45
+>   After instruction, depth: 45
+> Processing CONST0 with depth 45
+>   Push constant, new depth: 46
+>   After instruction, depth: 46
+> Processing CONST0 with depth 46
+>   Push constant, new depth: 47
+>   After instruction, depth: 47
+> Processing CONST0 with depth 47
+>   Push constant, new depth: 48
+>   After instruction, depth: 48
+> Processing CONST0 with depth 48
+>   Push constant, new depth: 49
+>   After instruction, depth: 49
+> Processing CONST0 with depth 49
+>   Push constant, new depth: 50
+>   After instruction, depth: 50
+> Processing CONST0 with depth 50
+>   Push constant, new depth: 51
+>   After instruction, depth: 51
+> Processing CONST0 with depth 51
+>   Push constant, new depth: 52
+>   After instruction, depth: 52
+> Processing CONST0 with depth 52
+>   Push constant, new depth: 53
+>   After instruction, depth: 53
+> Processing CONST0 with depth 53
+>   Push constant, new depth: 54
+>   After instruction, depth: 54
+> Processing CONST0 with depth 54
+>   Push constant, new depth: 55
+>   After instruction, depth: 55
+> Processing CONST0 with depth 55
+>   Push constant, new depth: 56
+>   After instruction, depth: 56
+> Processing CONST0 with depth 56
+>   Push constant, new depth: 57
+>   After instruction, depth: 57
+> Processing CONST0 with depth 57
+>   Push constant, new depth: 58
+>   After instruction, depth: 58
+> Processing CONST0 with depth 58
+>   Push constant, new depth: 59
+>   After instruction, depth: 59
+> Processing CONST0 with depth 59
+>   Push constant, new depth: 60
+>   After instruction, depth: 60
+> Processing CONST0 with depth 60
+>   Push constant, new depth: 61
+>   After instruction, depth: 61
+> Processing CONST0 with depth 61
+>   Push constant, new depth: 62
+>   After instruction, depth: 62
+> Processing CONST0 with depth 62
+>   Push constant, new depth: 63
+>   After instruction, depth: 63
+> Processing CONST0 with depth 63
+>   Push constant, new depth: 64
+>   After instruction, depth: 64
+> Processing CONST0 with depth 64
+>   Push constant, new depth: 65
+>   After instruction, depth: 65
+> Processing CONST0 with depth 65
+>   Push constant, new depth: 66
+>   After instruction, depth: 66
+> Processing CONST0 with depth 66
+>   Push constant, new depth: 67
+>   After instruction, depth: 67
+> Processing CONST0 with depth 67
+>   Push constant, new depth: 68
+>   After instruction, depth: 68
+> Processing CONST0 with depth 68
+>   Push constant, new depth: 69
+>   After instruction, depth: 69
+> Processing CONST0 with depth 69
+>   Push constant, new depth: 70
+>   After instruction, depth: 70
+> Processing CONST0 with depth 70
+>   Push constant, new depth: 71
+>   After instruction, depth: 71
+> Processing CONST0 with depth 71
+>   Push constant, new depth: 72
+>   After instruction, depth: 72
+> Processing CONST0 with depth 72
+>   Push constant, new depth: 73
+>   After instruction, depth: 73
+> Processing CONST0 with depth 73
+>   Push constant, new depth: 74
+>   After instruction, depth: 74
+> Processing CONST0 with depth 74
+>   Push constant, new depth: 75
+>   After instruction, depth: 75
+> Processing CONST0 with depth 75
+>   Push constant, new depth: 76
+>   After instruction, depth: 76
+> Processing CONST0 with depth 76
+>   Push constant, new depth: 77
+>   After instruction, depth: 77
+> Processing CONST0 with depth 77
+>   Push constant, new depth: 78
+>   After instruction, depth: 78
+> Processing CONST0 with depth 78
+>   Push constant, new depth: 79
+>   After instruction, depth: 79
+> Processing CONST0 with depth 79
+>   Push constant, new depth: 80
+>   After instruction, depth: 80
+> Processing CONST0 with depth 80
+>   Push constant, new depth: 81
+>   After instruction, depth: 81
+> Processing CONST0 with depth 81
+>   Push constant, new depth: 82
+>   After instruction, depth: 82
+> Processing CONST0 with depth 82
+>   Push constant, new depth: 83
+>   After instruction, depth: 83
+> Processing CONST0 with depth 83
+>   Push constant, new depth: 84
+>   After instruction, depth: 84
+> Processing CONST0 with depth 84
+>   Push constant, new depth: 85
+>   After instruction, depth: 85
+> Processing CONST0 with depth 85
+>   Push constant, new depth: 86
+>   After instruction, depth: 86
+> Processing CONST0 with depth 86
+>   Push constant, new depth: 87
+>   After instruction, depth: 87
+> Processing CONST0 with depth 87
+>   Push constant, new depth: 88
+>   After instruction, depth: 88
+> Processing CONST0 with depth 88
+>   Push constant, new depth: 89
+>   After instruction, depth: 89
+> Processing CONST0 with depth 89
+>   Push constant, new depth: 90
+>   After instruction, depth: 90
+> Processing CONST0 with depth 90
+>   Push constant, new depth: 91
+>   After instruction, depth: 91
+> Processing CONST0 with depth 91
+>   Push constant, new depth: 92
+>   After instruction, depth: 92
+> Processing CONST0 with depth 92
+>   Push constant, new depth: 93
+>   After instruction, depth: 93
+> Processing CONST0 with depth 93
+>   Push constant, new depth: 94
+>   After instruction, depth: 94
+> Processing CONST0 with depth 94
+>   Push constant, new depth: 95
+>   After instruction, depth: 95
+> Processing CONST0 with depth 95
+>   Push constant, new depth: 96
+>   After instruction, depth: 96
+> Processing CONST0 with depth 96
+>   Push constant, new depth: 97
+>   After instruction, depth: 97
+> Processing CONST0 with depth 97
+>   Push constant, new depth: 98
+>   After instruction, depth: 98
+> Processing CONST0 with depth 98
+>   Push constant, new depth: 99
+>   After instruction, depth: 99
+> Processing CONST0 with depth 99
+>   Push constant, new depth: 100
+>   After instruction, depth: 100
+> Processing POP with depth 100
+>   Pop, new depth: 99
+>   After instruction, depth: 99
+> Processing POP with depth 99
+>   Pop, new depth: 98
+>   After instruction, depth: 98
+> Processing POP with depth 98
+>   Pop, new depth: 97
+>   After instruction, depth: 97
+> Processing POP with depth 97
+>   Pop, new depth: 96
+>   After instruction, depth: 96
+> Processing POP with depth 96
+>   Pop, new depth: 95
+>   After instruction, depth: 95
+> Processing POP with depth 95
+>   Pop, new depth: 94
+>   After instruction, depth: 94
+> Processing POP with depth 94
+>   Pop, new depth: 93
+>   After instruction, depth: 93
+> Processing POP with depth 93
+>   Pop, new depth: 92
+>   After instruction, depth: 92
+> Processing POP with depth 92
+>   Pop, new depth: 91
+>   After instruction, depth: 91
+> Processing POP with depth 91
+>   Pop, new depth: 90
+>   After instruction, depth: 90
+> Processing POP with depth 90
+>   Pop, new depth: 89
+>   After instruction, depth: 89
+> Processing POP with depth 89
+>   Pop, new depth: 88
+>   After instruction, depth: 88
+> Processing POP with depth 88
+>   Pop, new depth: 87
+>   After instruction, depth: 87
+> Processing POP with depth 87
+>   Pop, new depth: 86
+>   After instruction, depth: 86
+> Processing POP with depth 86
+>   Pop, new depth: 85
+>   After instruction, depth: 85
+> Processing POP with depth 85
+>   Pop, new depth: 84
+>   After instruction, depth: 84
+> Processing POP with depth 84
+>   Pop, new depth: 83
+>   After instruction, depth: 83
+> Processing POP with depth 83
+>   Pop, new depth: 82
+>   After instruction, depth: 82
+> Processing POP with depth 82
+>   Pop, new depth: 81
+>   After instruction, depth: 81
+> Processing POP with depth 81
+>   Pop, new depth: 80
+>   After instruction, depth: 80
+> Processing POP with depth 80
+>   Pop, new depth: 79
+>   After instruction, depth: 79
+> Processing POP with depth 79
+>   Pop, new depth: 78
+>   After instruction, depth: 78
+> Processing POP with depth 78
+>   Pop, new depth: 77
+>   After instruction, depth: 77
+> Processing POP with depth 77
+>   Pop, new depth: 76
+>   After instruction, depth: 76
+> Processing POP with depth 76
+>   Pop, new depth: 75
+>   After instruction, depth: 75
+> Processing POP with depth 75
+>   Pop, new depth: 74
+>   After instruction, depth: 74
+> Processing POP with depth 74
+>   Pop, new depth: 73
+>   After instruction, depth: 73
+> Processing POP with depth 73
+>   Pop, new depth: 72
+>   After instruction, depth: 72
+> Processing POP with depth 72
+>   Pop, new depth: 71
+>   After instruction, depth: 71
+> Processing POP with depth 71
+>   Pop, new depth: 70
+>   After instruction, depth: 70
+> Processing POP with depth 70
+>   Pop, new depth: 69
+>   After instruction, depth: 69
+> Processing POP with depth 69
+>   Pop, new depth: 68
+>   After instruction, depth: 68
+> Processing POP with depth 68
+>   Pop, new depth: 67
+>   After instruction, depth: 67
+> Processing POP with depth 67
+>   Pop, new depth: 66
+>   After instruction, depth: 66
+> Processing POP with depth 66
+>   Pop, new depth: 65
+>   After instruction, depth: 65
+> Processing POP with depth 65
+>   Pop, new depth: 64
+>   After instruction, depth: 64
+> Processing POP with depth 64
+>   Pop, new depth: 63
+>   After instruction, depth: 63
+> Processing POP with depth 63
+>   Pop, new depth: 62
+>   After instruction, depth: 62
+> Processing POP with depth 62
+>   Pop, new depth: 61
+>   After instruction, depth: 61
+> Processing POP with depth 61
+>   Pop, new depth: 60
+>   After instruction, depth: 60
+> Processing POP with depth 60
+>   Pop, new depth: 59
+>   After instruction, depth: 59
+> Processing POP with depth 59
+>   Pop, new depth: 58
+>   After instruction, depth: 58
+> Processing POP with depth 58
+>   Pop, new depth: 57
+>   After instruction, depth: 57
+> Processing POP with depth 57
+>   Pop, new depth: 56
+>   After instruction, depth: 56
+> Processing POP with depth 56
+>   Pop, new depth: 55
+>   After instruction, depth: 55
+> Processing POP with depth 55
+>   Pop, new depth: 54
+>   After instruction, depth: 54
+> Processing POP with depth 54
+>   Pop, new depth: 53
+>   After instruction, depth: 53
+> Processing POP with depth 53
+>   Pop, new depth: 52
+>   After instruction, depth: 52
+> Processing POP with depth 52
+>   Pop, new depth: 51
+>   After instruction, depth: 51
+> Processing POP with depth 51
+>   Pop, new depth: 50
+>   After instruction, depth: 50
+> Processing POP with depth 50
+>   Pop, new depth: 49
+>   After instruction, depth: 49
+> Processing POP with depth 49
+>   Pop, new depth: 48
+>   After instruction, depth: 48
+> Processing POP with depth 48
+>   Pop, new depth: 47
+>   After instruction, depth: 47
+> Processing POP with depth 47
+>   Pop, new depth: 46
+>   After instruction, depth: 46
+> Processing POP with depth 46
+>   Pop, new depth: 45
+>   After instruction, depth: 45
+> Processing POP with depth 45
+>   Pop, new depth: 44
+>   After instruction, depth: 44
+> Processing POP with depth 44
+>   Pop, new depth: 43
+>   After instruction, depth: 43
+> Processing POP with depth 43
+>   Pop, new depth: 42
+>   After instruction, depth: 42
+> Processing POP with depth 42
+>   Pop, new depth: 41
+>   After instruction, depth: 41
+> Processing POP with depth 41
+>   Pop, new depth: 40
+>   After instruction, depth: 40
+> Processing POP with depth 40
+>   Pop, new depth: 39
+>   After instruction, depth: 39
+> Processing POP with depth 39
+>   Pop, new depth: 38
+>   After instruction, depth: 38
+> Processing POP with depth 38
+>   Pop, new depth: 37
+>   After instruction, depth: 37
+> Processing POP with depth 37
+>   Pop, new depth: 36
+>   After instruction, depth: 36
+> Processing POP with depth 36
+>   Pop, new depth: 35
+>   After instruction, depth: 35
+> Processing POP with depth 35
+>   Pop, new depth: 34
+>   After instruction, depth: 34
+> Processing POP with depth 34
+>   Pop, new depth: 33
+>   After instruction, depth: 33
+> Processing POP with depth 33
+>   Pop, new depth: 32
+>   After instruction, depth: 32
+> Processing POP with depth 32
+>   Pop, new depth: 31
+>   After instruction, depth: 31
+> Processing POP with depth 31
+>   Pop, new depth: 30
+>   After instruction, depth: 30
+> Processing POP with depth 30
+>   Pop, new depth: 29
+>   After instruction, depth: 29
+> Processing POP with depth 29
+>   Pop, new depth: 28
+>   After instruction, depth: 28
+> Processing POP with depth 28
+>   Pop, new depth: 27
+>   After instruction, depth: 27
+> Processing POP with depth 27
+>   Pop, new depth: 26
+>   After instruction, depth: 26
+> Processing POP with depth 26
+>   Pop, new depth: 25
+>   After instruction, depth: 25
+> Processing POP with depth 25
+>   Pop, new depth: 24
+>   After instruction, depth: 24
+> Processing POP with depth 24
+>   Pop, new depth: 23
+>   After instruction, depth: 23
+> Processing POP with depth 23
+>   Pop, new depth: 22
+>   After instruction, depth: 22
+> Processing POP with depth 22
+>   Pop, new depth: 21
+>   After instruction, depth: 21
+> Processing POP with depth 21
+>   Pop, new depth: 20
+>   After instruction, depth: 20
+> Processing POP with depth 20
+>   Pop, new depth: 19
+>   After instruction, depth: 19
+> Processing POP with depth 19
+>   Pop, new depth: 18
+>   After instruction, depth: 18
+> Processing POP with depth 18
+>   Pop, new depth: 17
+>   After instruction, depth: 17
+> Processing POP with depth 17
+>   Pop, new depth: 16
+>   After instruction, depth: 16
+> Processing POP with depth 16
+>   Pop, new depth: 15
+>   After instruction, depth: 15
+> Processing POP with depth 15
+>   Pop, new depth: 14
+>   After instruction, depth: 14
+> Processing POP with depth 14
+>   Pop, new depth: 13
+>   After instruction, depth: 13
+> Processing POP with depth 13
+>   Pop, new depth: 12
+>   After instruction, depth: 12
+> Processing POP with depth 12
+>   Pop, new depth: 11
+>   After instruction, depth: 11
+> Processing POP with depth 11
+>   Pop, new depth: 10
+>   After instruction, depth: 10
+> Processing POP with depth 10
+>   Pop, new depth: 9
+>   After instruction, depth: 9
+> Processing POP with depth 9
+>   Pop, new depth: 8
+>   After instruction, depth: 8
+> Processing POP with depth 8
+>   Pop, new depth: 7
+>   After instruction, depth: 7
+> Processing POP with depth 7
+>   Pop, new depth: 6
+>   After instruction, depth: 6
+> Processing POP with depth 6
+>   Pop, new depth: 5
+>   After instruction, depth: 5
+> Processing POP with depth 5
+>   Pop, new depth: 4
+>   After instruction, depth: 4
+> Processing POP with depth 4
+>   Pop, new depth: 3
+>   After instruction, depth: 3
+> Processing POP with depth 3
+>   Pop, new depth: 2
+>   After instruction, depth: 2
+> Processing POP with depth 2
+>   Pop, new depth: 1
+>   After instruction, depth: 1
+> Processing POP with depth 1
+>   Pop, new depth: 0
+>   After instruction, depth: 0
+> End of sequence, final depth: 0
+> Final validation result: true
+>
+> Testing alternating push/pop sequence:
+> Processing CONST0 with depth 0
+>   Push constant, new depth: 1
+>   After instruction, depth: 1
+> Processing POP with depth 1
+>   Pop, new depth: 0
+>   After instruction, depth: 0
+> Processing CONST0 with depth 0
+>   Push constant, new depth: 1
+>   After instruction, depth: 1
+> Processing POP with depth 1
+>   Pop, new depth: 0
+>   After instruction, depth: 0
+> Processing CONST0 with depth 0
+>   Push constant, new depth: 1
+>   After instruction, depth: 1
+> Processing POP with depth 1
+>   Pop, new depth: 0
+>   After instruction, depth: 0
+> Processing CONST0 with depth 0
+>   Push constant, new depth: 1
+>   After instruction, depth: 1
+> Processing POP with depth 1
+>   Pop, new depth: 0
+>   After instruction, depth: 0
+> Processing CONST0 with depth 0
+>   Push constant, new depth: 1
+>   After instruction, depth: 1
+> Processing POP with depth 1
+>   Pop, new depth: 0
+>   After instruction, depth: 0
+> Processing CONST0 with depth 0
+>   Push constant, new depth: 1
+>   After instruction, depth: 1
+> Processing POP with depth 1
+>   Pop, new depth: 0
+>   After instruction, depth: 0
+> Processing CONST0 with depth 0
+>   Push constant, new depth: 1
+>   After instruction, depth: 1
+> Processing POP with depth 1
+>   Pop, new depth: 0
+>   After instruction, depth: 0
+> Processing CONST0 with depth 0
+>   Push constant, new depth: 1
+>   After instruction, depth: 1
+> Processing POP with depth 1
+>   Pop, new depth: 0
+>   After instruction, depth: 0
+> Processing CONST0 with depth 0
+>   Push constant, new depth: 1
+>   After instruction, depth: 1
+> Processing POP with depth 1
+>   Pop, new depth: 0
+>   After instruction, depth: 0
+> Processing CONST0 with depth 0
+>   Push constant, new depth: 1
+>   After instruction, depth: 1
+> Processing POP with depth 1
+>   Pop, new depth: 0
+>   After instruction, depth: 0
+> End of sequence, final depth: 0
+> Final validation result: true
+>
+> Testing arithmetic chain sequence:
+> Instruction: CONST0, Operands: []
+> Instruction: CONST1, Operands: []
+> Instruction: CONST2, Operands: []
+> Instruction: ADDINT, Operands: []
+> Instruction: CONST1, Operands: []
+> Instruction: ADDINT, Operands: []
+> Instruction: ADDINT, Operands: []
+> Instruction: POP, Operands: []
+> Processing CONST0 with depth 0
+>   Push constant, new depth: 1
+>   After instruction, depth: 1
+> Processing CONST1 with depth 1
+>   Push constant, new depth: 2
+>   After instruction, depth: 2
+> Processing CONST2 with depth 2
+>   Push constant, new depth: 3
+>   After instruction, depth: 3
+> Processing ADDINT with depth 3
+>   Add, new depth: 2
+>   After instruction, depth: 2
+> Processing CONST1 with depth 2
+>   Push constant, new depth: 3
+>   After instruction, depth: 3
+> Processing ADDINT with depth 3
+>   Add, new depth: 2
+>   After instruction, depth: 2
+> Processing ADDINT with depth 2
+>   Add, new depth: 1
+>   After instruction, depth: 1
+> Processing POP with depth 1
+>   Pop, new depth: 0
+>   After instruction, depth: 0
+> End of sequence, final depth: 0
+> Final validation result: true
+> End of sequence, final depth: 0
+> Final validation result: true
+> Processing CONST0 with depth 0
+>   Push constant, new depth: 1
+>   After instruction, depth: 1
+> End of sequence, final depth: 1
+> Final validation result: false
+> Processing CONST0 with depth 0
+>   Push constant, new depth: 1
+>   After instruction, depth: 1
+> Processing CONST0 with depth 1
+>   Push constant, new depth: 2
+>   After instruction, depth: 2
+> Processing CONST0 with depth 2
+>   Push constant, new depth: 3
+>   After instruction, depth: 3
+> End of sequence, final depth: 3
+> Final validation result: false
+> Processing CONST0 with depth 0
+>   Push constant, new depth: 1
+>   After instruction, depth: 1
+> Processing CONST1 with depth 1
+>   Push constant, new depth: 2
+>   After instruction, depth: 2
+> Processing CONST2 with depth 2
+>   Push constant, new depth: 3
+>   After instruction, depth: 3
+> End of sequence, final depth: 3
+> Final validation result: false
+> Processing CONST0 with depth 0
+>   Push constant, new depth: 1
+>   After instruction, depth: 1
+> Processing CONST1 with depth 1
+>   Push constant, new depth: 2
+>   After instruction, depth: 2
+> Processing ADDINT with depth 2
+>   Add, new depth: 1
+>   After instruction, depth: 1
+> End of sequence, final depth: 1
+> Final validation result: false
+> End of sequence, final depth: 0
+> Final validation result: true
+> Processing CONST0 with depth 0
+>   Push constant, new depth: 1
+>   After instruction, depth: 1
+> End of sequence, final depth: 1
+> Final validation result: false
+>
+> Ran: 7 tests in: 0.13 seconds.
+> OK

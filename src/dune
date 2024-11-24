@@ -1,0 +1,15 @@
+(library
+ (name superopt)
+ (public_name ocaml_superopt)
+ (wrapped false)
+ (libraries core core_unix.command_unix ounit2 z3)
+ (preprocess
+  (pps ppx_jane ppx_expect ppx_deriving.show))
+ (modules types bytecode_generator verification))
+
+(executable
+ (name main)
+ (public_name ocaml-superopt)
+ (modules main)
+ (libraries superopt core core_bench z3)
+ (preprocess (pps ppx_jane ppx_expect ppx_deriving.show ppx_deriving.eq)))

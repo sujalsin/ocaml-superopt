@@ -1,0 +1,33 @@
+version = "0.1.0"
+description = ""
+requires =
+"base_quickcheck
+ base_quickcheck.ppx_quickcheck.runtime
+ bin_prot
+ core
+ core_unix.command_unix
+ fieldslib
+ ounit2
+ ppx_assert.runtime-lib
+ ppx_bench.runtime-lib
+ ppx_compare.runtime-lib
+ ppx_deriving.runtime
+ ppx_enumerate.runtime-lib
+ ppx_expect.collector
+ ppx_expect.config
+ ppx_hash.runtime-lib
+ ppx_here.runtime-lib
+ ppx_inline_test.config
+ ppx_inline_test.runtime-lib
+ ppx_log.types
+ ppx_module_timer.runtime
+ ppx_sexp_conv.runtime-lib
+ ppx_stable_witness.runtime
+ sexplib0
+ typerep
+ variantslib
+ z3"
+archive(byte) = "superopt.cma"
+archive(native) = "superopt.cmxa"
+plugin(byte) = "superopt.cma"
+plugin(native) = "superopt.cmxs"

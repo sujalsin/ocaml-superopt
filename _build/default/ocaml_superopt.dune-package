@@ -1,0 +1,75 @@
+(lang dune 3.16)
+(name ocaml_superopt)
+(version 0.1.0)
+(sections (lib .) (libexec .) (bin ../../bin) (doc ../../doc/ocaml_superopt))
+(files
+ (lib
+  (META
+   bytecode_generator.cmi
+   bytecode_generator.cmt
+   bytecode_generator.cmx
+   bytecode_generator.ml
+   dune-package
+   opam
+   superopt.a
+   superopt.cma
+   superopt.cmxa
+   types.cmi
+   types.cmt
+   types.cmx
+   types.ml
+   verification.cmi
+   verification.cmt
+   verification.cmx
+   verification.ml))
+ (libexec (superopt.cmxs))
+ (bin (ocaml-superopt))
+ (doc (README.md)))
+(library
+ (name ocaml_superopt)
+ (kind normal)
+ (archives (byte superopt.cma) (native superopt.cmxa))
+ (plugins (byte superopt.cma) (native superopt.cmxs))
+ (native_archives superopt.a)
+ (requires
+  core
+  core_unix.command_unix
+  ounit2
+  z3
+  ppx_sexp_conv.runtime-lib
+  sexplib0
+  ppx_compare.runtime-lib
+  ppx_enumerate.runtime-lib
+  ppx_hash.runtime-lib
+  ppx_here.runtime-lib
+  ppx_assert.runtime-lib
+  ppx_bench.runtime-lib
+  bin_prot
+  fieldslib
+  ppx_inline_test.config
+  ppx_inline_test.runtime-lib
+  ppx_module_timer.runtime
+  ppx_stable_witness.runtime
+  typerep
+  variantslib
+  ppx_expect.collector
+  ppx_expect.config
+  ppx_log.types
+  base_quickcheck.ppx_quickcheck.runtime
+  base_quickcheck
+  ppx_deriving.runtime)
+ (modes byte native)
+ (modules
+  (unwrapped
+   (module
+    (obj_name bytecode_generator)
+    (visibility public)
+    (source (path Bytecode_generator) (impl (path bytecode_generator.ml))))
+   (module
+    (obj_name types)
+    (visibility public)
+    (source (path Types) (impl (path types.ml))))
+   (module
+    (obj_name verification)
+    (visibility public)
+    (source (path Verification) (impl (path verification.ml)))))))

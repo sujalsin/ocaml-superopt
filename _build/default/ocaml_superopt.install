@@ -1,0 +1,29 @@
+lib: [
+  "_build/install/default/lib/ocaml_superopt/META"
+  "_build/install/default/lib/ocaml_superopt/bytecode_generator.cmi"
+  "_build/install/default/lib/ocaml_superopt/bytecode_generator.cmt"
+  "_build/install/default/lib/ocaml_superopt/bytecode_generator.cmx"
+  "_build/install/default/lib/ocaml_superopt/bytecode_generator.ml"
+  "_build/install/default/lib/ocaml_superopt/dune-package"
+  "_build/install/default/lib/ocaml_superopt/opam"
+  "_build/install/default/lib/ocaml_superopt/superopt.a"
+  "_build/install/default/lib/ocaml_superopt/superopt.cma"
+  "_build/install/default/lib/ocaml_superopt/superopt.cmxa"
+  "_build/install/default/lib/ocaml_superopt/types.cmi"
+  "_build/install/default/lib/ocaml_superopt/types.cmt"
+  "_build/install/default/lib/ocaml_superopt/types.cmx"
+  "_build/install/default/lib/ocaml_superopt/types.ml"
+  "_build/install/default/lib/ocaml_superopt/verification.cmi"
+  "_build/install/default/lib/ocaml_superopt/verification.cmt"
+  "_build/install/default/lib/ocaml_superopt/verification.cmx"
+  "_build/install/default/lib/ocaml_superopt/verification.ml"
+]
+libexec: [
+  "_build/install/default/lib/ocaml_superopt/superopt.cmxs"
+]
+bin: [
+  "_build/install/default/bin/ocaml-superopt"
+]
+doc: [
+  "_build/install/default/doc/ocaml_superopt/README.md"
+]

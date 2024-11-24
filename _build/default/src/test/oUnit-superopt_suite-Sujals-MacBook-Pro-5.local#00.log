@@ -1,0 +1,106 @@
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Runner: processes
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Chooser: simple
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Configuration suite_name = "superopt_suite"
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Configuration cache_filename = "/Users/sujal/CascadeProjects/ocaml-superopt/_build/default/src/test/oUnit-$(suite_name).cache"
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Configuration run_gc_full_major = "true"
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Configuration display = "true"
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Configuration results_style_1_X = "false"
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Configuration testdata_dir = "none"
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Configuration health_check_interval = "1."
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Configuration verbose = "false"
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Configuration chooser = "simple"
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Configuration output_html_dir = "none"
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Configuration processes_kill_period = "5."
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Configuration runner = "processes"
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Configuration shards = "2"
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Configuration processes_grace_period = "5."
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Configuration log_encoding = "utf-8"
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Configuration output_junit_file = "none"
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Configuration ci = "false"
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Configuration output_file = "/Users/sujal/CascadeProjects/ocaml-superopt/_build/default/src/test/oUnit-$(suite_name)-$(shard_id).log"
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Using 2 workers maximum.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Starting worker number Sujals-MacBook-Pro-5.local#01.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Worker Sujals-MacBook-Pro-5.local#01 started.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Starting worker number Sujals-MacBook-Pro-5.local#02.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Worker Sujals-MacBook-Pro-5.local#02 started.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:1:test_stack_balance_basic, superopt_suite:0:test_bytecode_generator.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#01 I: Start test superopt_suite:0:test_bytecode_generator.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:1:test_stack_balance_basic, superopt_suite:0:test_bytecode_generator.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#02 I: Start test superopt_suite:1:test_stack_balance_basic.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:1:test_stack_balance_basic, superopt_suite:0:test_bytecode_generator.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#01 I: Test superopt_suite:0:test_bytecode_generator is successful.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:1:test_stack_balance_basic, superopt_suite:0:test_bytecode_generator.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#01 I: End test superopt_suite:0:test_bytecode_generator.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:1:test_stack_balance_basic, superopt_suite:0:test_bytecode_generator.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:2:test_stack_balance_complex, superopt_suite:1:test_stack_balance_basic.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#01 I: Start test superopt_suite:2:test_stack_balance_complex.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:2:test_stack_balance_complex, superopt_suite:1:test_stack_balance_basic.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#02 I: Test superopt_suite:1:test_stack_balance_basic is successful.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:2:test_stack_balance_complex, superopt_suite:1:test_stack_balance_basic.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#02 I: End test superopt_suite:1:test_stack_balance_basic.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:2:test_stack_balance_complex, superopt_suite:1:test_stack_balance_basic.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:3:test_stack_balance_edge_cases, superopt_suite:2:test_stack_balance_complex.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#02 I: Start test superopt_suite:3:test_stack_balance_edge_cases.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:3:test_stack_balance_edge_cases, superopt_suite:2:test_stack_balance_complex.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#01 I: Test superopt_suite:2:test_stack_balance_complex is successful.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:3:test_stack_balance_edge_cases, superopt_suite:2:test_stack_balance_complex.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#01 I: End test superopt_suite:2:test_stack_balance_complex.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:3:test_stack_balance_edge_cases, superopt_suite:2:test_stack_balance_complex.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:4:test_verification, superopt_suite:3:test_stack_balance_edge_cases.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#01 I: Start test superopt_suite:4:test_verification.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:4:test_verification, superopt_suite:3:test_stack_balance_edge_cases.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#02 I: Test superopt_suite:3:test_stack_balance_edge_cases is successful.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:4:test_verification, superopt_suite:3:test_stack_balance_edge_cases.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#02 I: End test superopt_suite:3:test_stack_balance_edge_cases.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:4:test_verification, superopt_suite:3:test_stack_balance_edge_cases.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:5:test_cost_model, superopt_suite:4:test_verification.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#02 I: Start test superopt_suite:5:test_cost_model.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:5:test_cost_model, superopt_suite:4:test_verification.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#02 I: Test superopt_suite:5:test_cost_model is successful.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:5:test_cost_model, superopt_suite:4:test_verification.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#02 I: End test superopt_suite:5:test_cost_model.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:5:test_cost_model, superopt_suite:4:test_verification.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Still 2 tests running : superopt_suite:6:test_parallel_optimization, superopt_suite:4:test_verification.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:6:test_parallel_optimization, superopt_suite:4:test_verification.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#02 I: Start test superopt_suite:6:test_parallel_optimization.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Still 2 tests running : superopt_suite:6:test_parallel_optimization, superopt_suite:4:test_verification.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:6:test_parallel_optimization, superopt_suite:4:test_verification.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#02 I: Test superopt_suite:6:test_parallel_optimization is successful.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Still 2 tests running : superopt_suite:6:test_parallel_optimization, superopt_suite:4:test_verification.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:6:test_parallel_optimization, superopt_suite:4:test_verification.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#02 I: End test superopt_suite:6:test_parallel_optimization.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Still 2 tests running : superopt_suite:6:test_parallel_optimization, superopt_suite:4:test_verification.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 2 tests running: superopt_suite:6:test_parallel_optimization, superopt_suite:4:test_verification.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Still 1 tests running : superopt_suite:4:test_verification.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 1 tests running: superopt_suite:4:test_verification.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#01 I: Test superopt_suite:4:test_verification is successful.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Still 1 tests running : superopt_suite:4:test_verification.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 1 tests running: superopt_suite:4:test_verification.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#01 I: End test superopt_suite:4:test_verification.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Still 1 tests running : superopt_suite:4:test_verification.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 1 tests running: superopt_suite:4:test_verification.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: 0 tests running: .
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Worker Sujals-MacBook-Pro-5.local#02 has ended.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Worker Sujals-MacBook-Pro-5.local#01 has ended.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Used 2 worker during test execution.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Run 4 tests with shard Sujals-MacBook-Pro-5.local#02.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Run 3 tests with shard Sujals-MacBook-Pro-5.local#01.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Check health of shard Sujals-MacBook-Pro-5.local#02, 4 times.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Check health of shard Sujals-MacBook-Pro-5.local#01, 1 times.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: ==============
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Summary:
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Test superopt_suite:4:test_verification is successful.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Test superopt_suite:6:test_parallel_optimization is successful.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Test superopt_suite:5:test_cost_model is successful.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Test superopt_suite:3:test_stack_balance_edge_cases is successful.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Test superopt_suite:2:test_stack_balance_complex is successful.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Test superopt_suite:1:test_stack_balance_basic is successful.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Test superopt_suite:0:test_bytecode_generator is successful.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Ran: 7 tests in: 0.13 seconds.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Cases: 7.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Tried: 7.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Errors: 0.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Failures: 0.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Skip: 0.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Todo: 0.
+2024-11-24T08:47:29+00:00 Sujals-MacBook-Pro-5.local#00 I: Timeout: 0.

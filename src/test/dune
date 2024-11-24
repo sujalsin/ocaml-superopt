@@ -1,0 +1,5 @@
+(test
+ (name test_superopt)
+ (libraries superopt ounit2)
+ (preprocess
+  (pps ppx_jane ppx_expect ppx_deriving.show)))
